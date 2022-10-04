@@ -10,7 +10,7 @@ write_condarc: True
 
 environment_file: environment.yml
 
-license_file: LICENSE
+license_file: ../LICENSE
 company: Deltares
 
 # Images for Windows installer
