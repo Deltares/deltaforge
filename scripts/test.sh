@@ -62,10 +62,10 @@ fi
 
 echo "***** Python path *****"
 python -c "import sys; print(sys.executable)"
-python -c "import sys; assert 'miniforge' in sys.executable"
+python -c "import sys; assert 'deltaforge' in sys.executable"
 
 echo "***** Print system informations from Python *****"
-python -c "print('Hello Miniforge !')"
+python -c "print('Hello Deltaforge !')"
 python -c "import platform; print(platform.architecture())"
 python -c "import platform; print(platform.system())"
 python -c "import platform; print(platform.machine())"

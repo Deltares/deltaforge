@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build miniforge installers for Linux
+# Build deltaforge installers for Linux
 # on various architectures (aarch64, x86_64, ppc64le)
 # Notes:
 # It uses the qemu emulator (see [1] or [2]) to enable
@@ -14,7 +14,6 @@ ARCH=${ARCH:-aarch64}
 export TARGET_PLATFORM=${TARGET_PLATFORM:-linux-aarch64}
 DOCKER_ARCH=${DOCKER_ARCH:-arm64v8}
 DOCKERIMAGE=${DOCKERIMAGE:-condaforge/linux-anvil-aarch64}
-export DELTAFORGE_NAME=${DELTAFORGE_NAME:-Deltaforge}
 OS_NAME=${OS_NAME:-Linux}
 EXT=${EXT:-sh}
 export CONSTRUCT_ROOT=/construct
