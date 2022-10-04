@@ -1,0 +1,19 @@
+name: iMODforge
+version: 0.5
+installer_type: all
+
+channels:
+  - https://conda.anaconda.org/conda-forge/
+  - https://conda.anaconda.org/bioconda/
+
+write_condarc: True
+
+environment_file: environment.yml
+
+license_file: LICENSE
+company: Deltares
+
+# Images for Windows installer
+icon_image: iMOD-python-icon.png
+header_image: deltares.png
+welcome_image: Welcome_Image.png
