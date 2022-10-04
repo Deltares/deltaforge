@@ -1,5 +1,5 @@
-name: iMODforge
-version: 0.5
+name: Deltaforge
+version: 0.1
 installer_type: all
 
 channels:
