@@ -34,3 +34,9 @@ Next, run:
     $ constructor .
 
 This will built the installer, which should take around 10 minutes :stopwatch:.
+
+## Credits
+
+This repository is heavily inspired by
+[miniforge/mambaforge](https://github.com/conda-forge/miniforge). For a much
+leaner setup, look at their project. 
