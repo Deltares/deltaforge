@@ -15,14 +15,14 @@ conda install conda-libmamba-solver
 conda config --set experimental_solver libmamba
 
 echo "***** Install constructor *****"
-conda install -y "pillow>=3.1" menuinst freetype jinja2 curl libarchive "ruamel_yaml>=0.11.14,<0.16" -c conda-forge --override-channels
+conda install -y conda-standalone menuinst freetype jinja2 curl libarchive "ruamel_yaml>=0.11.14,<0.16" -c conda-forge --override-channels
 
 if [[ "$(uname)" == "Darwin" ]]; then
     conda install -y coreutils -c conda-forge --override-channels
 fi
 # shellcheck disable=SC2154
 if [[ "${TARGET_PLATFORM}" == win-* ]]; then
-    conda install -y "nsis=3.01" -c conda-forge --override-channels
+    conda install -y "nsis=3.01" "pillow>=3.1" -c conda-forge --override-channels
 fi
 
 # We require the latest, unreleased version of constructor,
