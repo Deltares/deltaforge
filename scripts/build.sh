@@ -38,6 +38,10 @@ else
    TEMP_DIR=$(mktemp -d);
 fi
 
+# Force to most permissive so that constructor has 
+# the most permissive situation.
+chmod 777 ${TEMP_DIR}
+
 echo "***** Copy file for installer construction *****"
 cp -R deltaforge "${TEMP_DIR}/"
 cp LICENSE "${TEMP_DIR}/"
