@@ -14,6 +14,7 @@ ARCH=${ARCH:-aarch64}
 export TARGET_PLATFORM=${TARGET_PLATFORM:-linux-aarch64}
 DOCKER_ARCH=${DOCKER_ARCH:-arm64v8}
 DOCKERIMAGE=${DOCKERIMAGE:-condaforge/linux-anvil-aarch64}
+export DELTAFORGE_NAME=${DELTAFORGE_NAME:-Deltaforge}
 OS_NAME=${OS_NAME:-Linux}
 EXT=${EXT:-sh}
 export CONSTRUCT_ROOT=/construct
@@ -28,7 +29,7 @@ docker run --privileged --rm tonistiigi/binfmt --install all
 
 echo "============= Build the installer ============="
 docker run --rm -v "$(pwd):/construct" \
-  -e CONSTRUCT_ROOT -e DELTAFORGE_VERSION -e Deltaforge -e TARGET_PLATFORM \
+  -e CONSTRUCT_ROOT -e DELTAFORGE_VERSION -e DELTAFORGE_NAME -e TARGET_PLATFORM \
   "${DOCKERIMAGE}" /construct/scripts/build.sh
 
 echo "============= Test the installer ============="
