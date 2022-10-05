@@ -37,8 +37,9 @@ if [[ "$(uname)" == MINGW* ]]; then
   conda.exe list
 
   echo "***** Check if we are bundling packages from msys2 or defaults *****"
-  conda.exe list | grep defaults && exit 1
-  conda.exe list | grep msys2 && exit 1
+  # The $ anchor matches the end of the line, where the channelname is printed.
+  conda.exe list | grep 'defaults$' && exit 1
+  conda.exe list | grep 'msys2$' && exit 1
 
   echo "***** Check if we can install a package which requires msys2 *****"
   conda.exe install r-base --yes --quiet
