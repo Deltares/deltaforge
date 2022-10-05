@@ -8,6 +8,10 @@ channels:
 
 write_condarc: True
 
+# keep pkgs for space-saving implications for hardlinks when create new environments
+# and keep the same with Miniconda
+keep_pkgs: True
+
 environment_file: environment.yml
 
 license_file: ../LICENSE
