@@ -72,4 +72,8 @@ python -c "import platform; print(platform.system())"
 python -c "import platform; print(platform.machine())"
 python -c "import platform; print(platform.release())"
 
+echo "**** Test importing Deltares packages"
+python -c "import imod"
+python -c "import hydromt"
+
 echo "***** Done: Testing installer *****"
