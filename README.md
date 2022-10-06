@@ -37,6 +37,6 @@ This will built the installer, which should take around 10 minutes :stopwatch:.
 
 ## Credits
 
-This repository is heavily inspired by
+This repository is heavily inspired by, and uses slightly modified scripts from,  
 [miniforge/mambaforge](https://github.com/conda-forge/miniforge). For a much
-leaner setup, look at their project. 
+leaner setup, check at their project. 
