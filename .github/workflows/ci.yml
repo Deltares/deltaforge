@@ -74,12 +74,12 @@ jobs:
         ls -alh build
       shell: bash
 
-#    - name: Upload deltaforge to Github artifact
-#      if: always()
-#      uses: actions/upload-artifact@v3
-#      with:
-#        path: build/Deltaforge-${{ matrix.OS_NAME }}-${{ matrix.ARCH }}*
-#        name: Deltaforge-${{ matrix.OS_NAME }}-${{ matrix.ARCH }}
+    - name: Upload deltaforge to Github artifact
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        path: build/Deltaforge-${{ matrix.OS_NAME }}-${{ matrix.ARCH }}*
+        name: Deltaforge-${{ matrix.OS_NAME }}-${{ matrix.ARCH }}
 
     - name: Upload deltaforge to release
       uses: svenstaro/upload-release-action@v2
