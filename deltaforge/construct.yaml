@@ -65,6 +65,6 @@ license_file: ../LICENSE
 company: Deltares
 
 # Images for Windows installer
-icon_image: iMOD-python-icon.png
+icon_image: deltaforge_icon.png
 header_image: deltares.png
 welcome_image: Welcome_Image.png
