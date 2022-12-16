@@ -27,7 +27,7 @@ fi
 
 # We require the latest, unreleased version of constructor,
 # as this supports the libmamba solver
-pip install git+https://github.com/conda/constructor
+pip install git+https://github.com/conda/constructor@fd028c8
 
 conda list
 
