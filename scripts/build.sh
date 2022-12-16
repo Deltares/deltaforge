@@ -10,7 +10,7 @@ CONSTRUCT_ROOT="${CONSTRUCT_ROOT:-${PWD}}"
 cd "${CONSTRUCT_ROOT}"
 
 echo "***** Install libmamba solver *****"
-conda update -y conda=22.9
+conda install -y conda=22.9
 conda install conda-libmamba-solver
 conda config --set experimental_solver libmamba
 
