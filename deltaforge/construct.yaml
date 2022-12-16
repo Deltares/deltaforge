@@ -58,7 +58,7 @@ specs:
   - toolz
   - vtk >=9.0
   - xarray
-  - xugrid
+  - xugrid >=0.1.10
   - zarr
 
 license_file: ../LICENSE
