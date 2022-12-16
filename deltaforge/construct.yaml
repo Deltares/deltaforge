@@ -29,7 +29,7 @@ specs:
   - hydromt
   - hydromt_sfincs
   - hydromt_wflow
-  - imod = 0.11.4
+  - imod = 0.11.5
   - ipykernel
   - ipython
   - jinja2
@@ -52,7 +52,7 @@ specs:
   - scipy
   - scooby
   - seaborn
-  - shapely
+  - shapely >=1.8,<2.0 # Temporarily force version smaller than 2.0, until HydroMT supports this.
   - bioconda::snakemake # Get only snakemake from bioconda channel
   - spyder
   - toolz
