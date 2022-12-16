@@ -12,7 +12,7 @@ cd "${CONSTRUCT_ROOT}"
 echo "***** Install libmamba solver *****"
 conda update -y conda
 conda install conda-libmamba-solver
-conda config --set experimental_solver libmamba
+conda config --set solver libmamba
 
 echo "***** Install constructor *****"
 conda install -y conda-standalone menuinst freetype jinja2 curl libarchive "ruamel_yaml>=0.11.14,<0.16" -c conda-forge --override-channels
