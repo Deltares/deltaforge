@@ -1,2 +1,4 @@
 build/
 *.exe
+docs/_build/
+.vscode/
