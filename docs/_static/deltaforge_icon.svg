@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="96"
+   inkscape:export-filename="C:\Users\engelen\projects_wdir\imod-logo\deltaforge\deltaforge_icon.png"
+   sodipodi:docname="deltaforge_icon.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg975"
+   version="1.1"
+   viewBox="0 0 72.760417 72.760417"
+   height="275"
+   width="275">
+  <defs
+     id="defs969" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="1912"
+     inkscape:window-height="1057"
+     inkscape:window-width="1827"
+     units="px"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="132.93305"
+     inkscape:cx="158.31357"
+     inkscape:zoom="1.4"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       id="grid1611"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata972">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       inkscape:export-ydpi="71.651009"
+       inkscape:export-xdpi="71.651009"
+       style="fill:#080c80;fill-opacity:1"
+       id="g4"
+       stroke="none"
+       fill="#000000"
+       transform="matrix(0.00708945,0,0,-0.007111,-3.2633964,75.980192)">
+      <path
+         sodipodi:nodetypes="ccccccccccsccc"
+         style="fill:#080c80;fill-opacity:1"
+         id="path2"
+         d="m 955,10675 c -233,-42 -430,-231 -480,-460 -14,-63 -15,-556 -13,-4705 l 3,-4635 23,-65 c 77,-213 256,-367 469,-405 66,-12 802,-14 4643,-15 3114,0 4585,3 4629,11 141,22 245,76 348,179 71,72 131,180 158,285 13,52 15,592 15,4675 0,4083 -2,4623 -15,4675 -62,246 -256,424 -506,464 -102,17 -9182,13 -9274,-4 z" />
+    </g>
+    <text
+       id="text1626"
+       y="69.358643"
+       x="5.2629056"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:94.6422px;line-height:1.25;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.492926"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Georgia;-inkscape-font-specification:Georgia;fill:#ffffff;fill-opacity:1;stroke-width:0.492926"
+         y="69.358643"
+         x="5.2629056"
+         id="tspan1628"
+         sodipodi:role="line">Δ</tspan></text>
+  </g>
+</svg>
