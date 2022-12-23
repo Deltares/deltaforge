@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="deltaforge-logo.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg841"
+   version="1.1"
+   viewBox="0 0 44.999999 10.125"
+   height="13.5mm"
+   width="60mm">
+  <defs
+     id="defs835" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="10"
+     inkscape:window-x="1912"
+     inkscape:window-height="1057"
+     inkscape:window-width="1827"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="36.218241"
+     inkscape:cx="109.90117"
+     inkscape:zoom="3.959798"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata838">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       id="text1626"
+       y="9.5558529"
+       x="35.024586"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5665px;line-height:1.25;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0654503"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Georgia;-inkscape-font-specification:Georgia;fill:#ffffff;fill-opacity:1;stroke-width:0.0654503"
+         y="9.5558529"
+         x="35.024586"
+         id="tspan1628"
+         sodipodi:role="line">Δ</tspan></text>
+    <text
+       id="text1424"
+       y="7.416729"
+       x="0.65146941"
+       style="font-size:2.91042px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';letter-spacing:0px;word-spacing:0px;stroke-width:0.198437"
+       xml:space="preserve"><tspan
+         style="font-size:5.29167px;fill:#ffffff;fill-opacity:1;stroke-width:0.198437"
+         y="7.416729"
+         x="0.65146941"
+         id="tspan1422"
+         sodipodi:role="line">Deltaforge</tspan></text>
+  </g>
+</svg>
