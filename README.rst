@@ -3,8 +3,8 @@ Deltaforge
 ##########
 
 .. figure:: deltaforge/deltaforge_icon.png
-   :width: 200px
-   :height: 200px
+   :width: 100px
+   :height: 100px
    :scale: 75%
    :align: right
 
@@ -13,7 +13,8 @@ What is it?
 -----------
 
 Deltaforge is an installer of selected `Deltares <https://www.deltares.nl/en/>`_
-python packages and their dependencies. 
+python packages and their dependencies. This makes the process of installing for
+example iMOD Python or HydroMT significantly easier.
 
 Where?
 ------
@@ -33,9 +34,9 @@ What's included?
 Deltares packages currently included are:
 
 * `iMOD Python <https://deltares.gitlab.io/imod/imod-python>`_
-* `Hydro MT <https://deltares.github.io/hydromt/latest>`_
-* `Hydro MT WFLOW plugin <https://deltares.github.io/hydromt_wflow/latest/>`_
-* `Hydro MT SFINCS plugin <https://deltares.github.io/hydromt_sfincs/latest/>`_
+* `HydroMT <https://deltares.github.io/hydromt/latest>`_
+* `HydroMT WFLOW plugin <https://deltares.github.io/hydromt_wflow/latest/>`_
+* `HydroMT SFINCS plugin <https://deltares.github.io/hydromt_sfincs/latest/>`_
 * `xugrid <https://deltares.github.io/xugrid/>`_
 
 Important non-Deltares packages included in Deltaforge are:
@@ -72,4 +73,17 @@ Credits
 
 This repository is heavily inspired by, and uses slightly modified scripts from,  
 `miniforge/mambaforge <https://github.com/conda-forge/miniforge>`_. For a much
-leaner setup, check at their project. 
+leaner setup, check out their project. 
+
+
+Logos
+-----
+
+.. raw:: html
+
+   <br/>
+   <a class="reference external image-reference" href="https://www.deltares.nl">
+      <img src="docs/_static/deltares.svg" style="height:60px;"/>
+      <br/>
+      <img src="docs/_static/enabling-delta-life.svg" style="height:60px;"/>
+   </a>
