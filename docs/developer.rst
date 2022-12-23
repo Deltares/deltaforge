@@ -17,7 +17,12 @@ If this is the case, you can post an issue
 `on our issueboard. <https://github.com/Deltares/deltaforge/issues>`_
 
 Or you can add it to the ``construct.yaml`` file under ``specs``, and open up a
-pull request.
+pull request. The ``construct.yaml`` currently looks like:
+
+.. literalinclude:: ../deltaforge/construct.yaml
+   :language: yaml
+   :caption: construct.yaml
+
 
 Building locally
 ----------------
@@ -31,10 +36,11 @@ dependencies to include, for which the standard ``conda`` solver is too slow.
 Luckily for us, the ``libmamba`` solver `is recently added to conda.
 <https://www.anaconda.com/blog/conda-is-fast-now>`_ However, ``constructor``
 does not support the plugin structure introduced in ``conda 20.11`` yet. But our
-way out is using the ``conda 20.9`` installation, which included ``libmamba`` as
-an experimental solver. In addition, ``constructor`` hasn't released a version
-yet which support experimental solvers, so we have to ``pip`` directly from
-Github.
+way out is using the ``conda 20.9`` installation, which included ``libmamba``
+`as an experimental solver
+<https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community>`_. In
+addition, ``constructor`` hasn't released a version yet which support
+experimental solvers, so we have to ``pip`` directly from Github.
 
 **TL;DR**, these are the commandos required to build Deltaforge at present (22-12-2022):
 
