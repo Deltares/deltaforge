@@ -10,11 +10,11 @@ requirements:
 
 * The package is released on `conda-forge <https://conda-forge.org/>`_
 * The package has a license which allows us to distribute it freely
-* The package dependency requirements needs to be compatible with the already
+* The package dependency requirements need to be compatible with the already
   included packages
 
 If this is the case, you can post an issue 
-`on our issuboard. <https://github.com/Deltares/deltaforge/issues>`_
+`on our issueboard. <https://github.com/Deltares/deltaforge/issues>`_
 
 Or you can add it to the ``construct.yaml`` file under ``specs``, and open up a
 pull request.

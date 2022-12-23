@@ -16,7 +16,7 @@ You can download the installer here:
 What's included?
 ----------------
 
-Packages currently included are:
+Deltares packages currently included are:
 
 * `iMOD Python <https://deltares.gitlab.io/imod/imod-python>`_
 * `Hydro MT <https://deltares.github.io/hydromt/latest>`_
