@@ -2,7 +2,7 @@
 Deltaforge
 ##########
 
-.. figure:: ../deltaforge/deltaforge_icon.png
+.. figure:: deltaforge/deltaforge_icon.png
    :width: 200px
    :scale: 75%
    :align: right
@@ -65,16 +65,10 @@ with all the required Python packages installed. These packages are contained in
 the executable. The installer thus helps circumventing the four issues mentioned
 above.
 
+
 Credits
 -------
 
 This repository is heavily inspired by, and uses slightly modified scripts from,  
 `miniforge/mambaforge <https://github.com/conda-forge/miniforge>`_. For a much
 leaner setup, check at their project. 
-
-.. toctree::
-   :titlesonly:
-   :hidden:
-
-   user-guide
-   developer
