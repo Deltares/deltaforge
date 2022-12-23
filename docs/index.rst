@@ -10,7 +10,14 @@ python packages and their dependencies.
 
 Where?
 ------
-You can download the installer here:
+
+* `You can download the signed installer here on oss.deltares.nl <https://download.deltares.nl/en/download/imod-viewer/>`_
+* `The unsigned installer can be dowloaded from Github <https://github.com/Deltares/deltaforge/releases>`_
+
+.. note::
+
+   Windows will throw warnings to users when using *unsigned* installers, and,
+   with stricter security settings, might not even allow installations.
 
 
 What's included?
