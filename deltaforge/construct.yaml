@@ -1,5 +1,5 @@
 name: Deltaforge
-version: 0.2
+version: 0.3
 installer_type: all
 
 channels:
@@ -25,11 +25,12 @@ specs:
   - dask
   - flopy
   - geopandas
+  - gistim
   - graphviz
   - hydromt
   - hydromt_sfincs
   - hydromt_wflow
-  - imod = 0.11.5
+  - imod = 0.12.0
   - ipykernel
   - ipython
   - jinja2
@@ -52,9 +53,11 @@ specs:
   - scipy
   - scooby
   - seaborn
-  - shapely >=1.8,<2.0 # Temporarily force version smaller than 2.0, until HydroMT supports this.
+  - shapely >=2.0
   - bioconda::snakemake # Get only snakemake from bioconda channel
   - spyder
+  - ttim
+  - timml
   - toolz
   - vtk >=9.0
   - xarray
