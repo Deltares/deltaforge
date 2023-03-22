@@ -25,7 +25,7 @@ specs:
   - dask
   - flopy
   - geopandas
-  - gistim >=0.4.0
+  - gistim =0.4.0
   - graphviz
   - hydromt
   - hydromt_sfincs
@@ -54,9 +54,9 @@ specs:
   - scooby
   - seaborn
   - shapely >=2.0
-  - bioconda::snakemake >=7.19 # Get only snakemake from bioconda channel
+  - bioconda::snakemake # Get only snakemake from bioconda channel
   - spyder
-  - ttim >=0.6.4
+  - ttim =0.6.4
   - timml =6.1.0 # Due to a typo, timml 6.04 is seen as the last version on conda-forge.
   - toolz
   - vtk >=9.0
