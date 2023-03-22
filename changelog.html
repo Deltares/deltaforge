@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>User Guide &#8212; Deltaforge 0.3 documentation</title>
+    <title>Changelog &#8212; Deltaforge 0.3 documentation</title>
   
   
   
@@ -39,11 +39,10 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'user-guide';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'changelog';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Developer guide" href="developer.html" />
-    <link rel="prev" title="Deltaforge" href="index.html" />
+    <link rel="prev" title="Known Issues" href="known_issues.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -129,8 +128,8 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="user-guide.html">
                         User Guide
                       </a>
                     </li>
@@ -150,8 +149,8 @@
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="changelog.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Changelog
                       </a>
                     </li>
@@ -260,8 +259,8 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="user-guide.html">
                         User Guide
                       </a>
                     </li>
@@ -281,8 +280,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="changelog.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Changelog
                       </a>
                     </li>
@@ -370,7 +369,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">User Guide</li>
+    <li class="breadcrumb-item active" aria-current="page">Changelog</li>
   </ul>
 </nav>
 </div>
@@ -387,97 +386,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="user-guide">
-<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this heading">#</a></h1>
-<section id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h2>
-<section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
-<p>To install Deltaforge, double-click the executable, this will open the
-installation Wizard. You will be greeted with the welcome screen.</p>
-<figure class="align-default" id="id1">
-<img alt="_images/1_welcome_screen.png" src="_images/1_welcome_screen.png" />
-<figcaption>
-<p><span class="caption-text">The welcome screen</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Click “Next”, and then “I agree” in the license agreement.</p>
-<figure class="align-default" id="id2">
-<img alt="_images/2_license.png" src="_images/2_license.png" />
-<figcaption>
-<p><span class="caption-text">License agreement screen</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Next, you get to decide what type of installation you want. On your local
-machine it suffices to select <cite>Just me</cite>. If you are an admin of a server and you
-want to let others enjoy the Deltaforge installation as well, click <cite>All Users</cite>.</p>
-<figure class="align-default" id="id3">
-<img alt="_images/3_installation_type.png" src="_images/3_installation_type.png" />
-<figcaption>
-<p><span class="caption-text">The installation type screen</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Next you get to decide where the python environment is installed.
-The default location is usually fine.</p>
-<figure class="align-default" id="id4">
-<img alt="_images/4_install_location.png" src="_images/4_install_location.png" />
-<figcaption>
-<p><span class="caption-text">The location of the python installation</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Finally, some further configuration is possible. The screenshots contains the
-options we recommend.</p>
-<figure class="align-default" id="id5">
-<img alt="_images/5_installation_options.png" src="_images/5_installation_options.png" />
-<figcaption>
-<p><span class="caption-text">Installation options with the recommended options selected.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h1>
+<p>Conscious changes to Deltaforge are described here. Note that with each
+version, the latest versions of packages of that moment are installed if left
+unspecified in the <code class="docutils literal notranslate"><span class="pre">construct.yaml</span></code> file. The latest version of which can be
+found in <span class="xref std std-ref">include-ref</span>.</p>
+<section id="v0-3-22-03-2023">
+<h2>v0.3 [22-03-2023]<a class="headerlink" href="#v0-3-22-03-2023" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Add gistim as dependency</p></li>
+<li><p>Update iMOD Python to 0.12</p></li>
+<li><p>Enforce shapely &gt;= 2.0</p></li>
+<li><p>Enforce snakemake &gt;= 7.19.0, fixing a tedious bug on Windows</p></li>
+</ul>
 </section>
-<section id="using-deltaforge">
-<h3>Using Deltaforge<a class="headerlink" href="#using-deltaforge" title="Permalink to this heading">#</a></h3>
-<p>The easiest way to start your environment is by pressing the Windows Key and
-start typing <cite>deltaforge</cite>. This will let you select the <cite>Deltaforge Prompt</cite>.
-Select this.</p>
-<figure class="align-default" id="id6">
-<img alt="_images/6_deltaforge_start_menu.png" src="_images/6_deltaforge_start_menu.png" />
-<figcaption>
-<p><span class="caption-text">The Deltaforge Prompt should be findable in the Windows start menu</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>This will start a command prompt screen (<code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code>), where at startup the
-Deltaforge python environment is activated.</p>
-<figure class="align-default" id="id7">
-<img alt="_images/7_deltaforge_prompt.png" src="_images/7_deltaforge_prompt.png" />
-<figcaption>
-<p><span class="caption-text">The Deltaforge prompt. You can type <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">list</span></code> to view all the packages
-installed.</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>To view all the packages installed in the environment you can type <code class="docutils literal notranslate"><span class="pre">mamba</span>
-<span class="pre">list</span></code> and press Enter. This will list all packages installed in the
-environment. If you want to start coding, you can type <code class="docutils literal notranslate"><span class="pre">spyder</span></code>, which will
-start Spyder, a Python scientific development environment.</p>
+<section id="v0-2-22-12-2022">
+<h2>v0.2 [22-12-2022]<a class="headerlink" href="#v0-2-22-12-2022" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Add Spyder into environment</p></li>
+<li><p>Update iMOD Python to 0.11.5</p></li>
+<li><p>Include xugrid</p></li>
+<li><p>Enforce shapely &gt;=0.11.8, &lt;0.12</p></li>
+</ul>
 </section>
-<section id="uninstalling-deltaforge">
-<h3>Uninstalling Deltaforge<a class="headerlink" href="#uninstalling-deltaforge" title="Permalink to this heading">#</a></h3>
-<p>To install Deltaforge, navigate to your installation folder. By default the
-installation folder is under <code class="docutils literal notranslate"><span class="pre">C:/Users/&lt;your_name&gt;/Appdata/Local/deltaforge</span></code>.
-If you cannot find it, open the Deltaforge prompt, type <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">info</span></code>, which
-will the location of the Deltaforge installation after the <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">environment</span></code>
-keyword.</p>
-<p>Once you found the installation folder, double click
-<code class="docutils literal notranslate"><span class="pre">Uninstall-Deltaforge.exe</span></code> to start it. The uninstall wizard will guide you
-through the uninstallation.</p>
-</section>
-</section>
-<section id="macos">
-<h2>MacOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h2>
-<p>This is still something on our TODO list.</p>
-</section>
-<section id="linux">
-<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h2>
-<p>This is still something on our TODO list.</p>
+<section id="v0-1-17-11-2022">
+<h2>v0.1 [17-11-2022]<a class="headerlink" href="#v0-1-17-11-2022" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Initial release with iMOD Python and HydroMT</p></li>
+</ul>
 </section>
 </section>
 
@@ -490,22 +427,13 @@ through the uninstallation.</p>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="known_issues.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Deltaforge</p>
+        <p class="prev-next-title">Known Issues</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="developer.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Developer guide</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -522,20 +450,15 @@ through the uninstallation.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-deltaforge">Using Deltaforge</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstalling-deltaforge">Uninstalling Deltaforge</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-3-22-03-2023">v0.3 [22-03-2023]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-2-22-12-2022">v0.2 [22-12-2022]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-1-17-11-2022">v0.1 [17-11-2022]</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="_sources/user-guide.rst.txt">
+    <a href="_sources/changelog.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
