@@ -67,6 +67,18 @@ list`` and press Enter. This will list all packages installed in the
 environment. If you want to start coding, you can type ``spyder``, which will
 start Spyder, a Python scientific development environment.
 
+Uninstalling Deltaforge
+-----------------------
+
+To install Deltaforge, navigate to your installation folder. By default the
+installation folder is under ``C:/Users/<your_name>/Appdata/Local/deltaforge``.
+If you cannot find it, open the Deltaforge prompt, type ``mamba info``, which
+will the location of the Deltaforge installation after the ``base environment``
+keyword.
+
+Once you found the installation folder, double click
+``Uninstall-Deltaforge.exe`` to start it. The uninstall wizard will guide you
+through the uninstallation.
 
 MacOS
 #####

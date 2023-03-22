@@ -42,6 +42,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'developer';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Known Issues" href="known_issues.html" />
     <link rel="prev" title="User Guide" href="user-guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -138,6 +139,13 @@
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Developer guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="known_issues.html">
+                        Known Issues
                       </a>
                     </li>
                 
@@ -255,6 +263,13 @@ document.write(`
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Developer guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="known_issues.html">
+                        Known Issues
                       </a>
                     </li>
                 
@@ -435,7 +450,7 @@ pull request. The <code class="docutils literal notranslate"><span class="pre">c
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bioconda::snakemake</span><span class="w"> </span><span class="c1"># Get only snakemake from bioconda channel</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spyder</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ttim</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timml</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timml =6.1.0</span><span class="w"> </span><span class="c1"># Due to a typo, timml 6.04 is seen as the last version on conda-forge.</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toolz</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vtk &gt;=9.0</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xarray</span>
@@ -499,6 +514,15 @@ unsigned. Windows will throw warnings to users when using unsigned installers.</
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">User Guide</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="known_issues.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Known Issues</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
