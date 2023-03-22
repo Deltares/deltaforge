@@ -16,7 +16,7 @@ copyright = "Deltares"
 author = "The product team hydrology"
 
 # The full version, including alpha/beta/rc tags
-release = "0.3"
+release = "0.3.1"
 # The short version which is displayed
 version = ".".join(release.split(".")[:3]) + ".dev"
 
