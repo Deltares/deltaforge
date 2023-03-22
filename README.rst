@@ -38,6 +38,7 @@ Deltares packages currently included are:
 * `HydroMT WFLOW plugin <https://deltares.github.io/hydromt_wflow/latest/>`_
 * `HydroMT SFINCS plugin <https://deltares.github.io/hydromt_sfincs/latest/>`_
 * `xugrid <https://deltares.github.io/xugrid/>`_
+* `gistim <https://github.com/Deltares/QGIS-Tim>`_
 
 Important non-Deltares packages included in Deltaforge are:
 
@@ -50,6 +51,8 @@ Important non-Deltares packages included in Deltaforge are:
 * `xarray <https://xarray.dev/>`_
 * `snakemake <https://snakemake.readthedocs.io/en/stable/>`_
 * `spyder <https://www.spyder-ide.org/>`_
+* `timml <https://mbakker7.github.io/timml/docs/builddocs/html/index.html#>`
+* `ttim <https://mbakker7.github.io/ttim/docs/builddocs/html/index.html#>` 
 
 Why?
 ----
