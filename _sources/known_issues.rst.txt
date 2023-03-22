@@ -28,3 +28,6 @@ the user folder is something like (behind the scenes):
     
     C:\\\\SnapVolumesTemp\\\\MountPoints\\\\{85d73492-0000-0000-0000-100000000000}\\\\{VNYC332F-0D0E-12TD-3RD8-533D107F826F}\\\\SVROOT\\\\Users\\\\<username>\\\\...``
 
+To fix this, you can enable long paths in the Windows Registry. To do so,
+follow the instructions `written by How To Geek.
+<https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/>`_
