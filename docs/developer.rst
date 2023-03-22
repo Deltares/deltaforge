@@ -2,6 +2,8 @@
 Developer guide
 ***************
 
+.. _include-pkg:
+
 Including a package
 -------------------
 

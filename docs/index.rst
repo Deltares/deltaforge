@@ -84,6 +84,7 @@ leaner setup, check out their project.
    user-guide
    developer
    known_issues
+   changelog
 
 Logos
 -----
