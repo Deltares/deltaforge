@@ -7,10 +7,15 @@ version, the latest versions of packages of that moment are installed if left
 unspecified in the ``construct.yaml`` file. The latest version of which can be
 found in :ref:`include-ref`.
 
+v0.3.1 [22-03-2023]
+#################
+
+- Bump gistim to version 0.4.1
+
 v0.3 [22-03-2023]
 #################
 
-- Add gistim as dependency
+- Add gistim 0.4.0 as dependency
 - Update iMOD Python to 0.12
 - Enforce shapely >= 2.0
 - Enforce snakemake >= 7.19.0, fixing a tedious bug on Windows
