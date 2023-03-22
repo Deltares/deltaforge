@@ -51,8 +51,8 @@ Important non-Deltares packages included in Deltaforge are:
 * `xarray <https://xarray.dev/>`_
 * `snakemake <https://snakemake.readthedocs.io/en/stable/>`_
 * `spyder <https://www.spyder-ide.org/>`_
-* `timml <https://mbakker7.github.io/timml/docs/builddocs/html/index.html#>`
-* `ttim <https://mbakker7.github.io/ttim/docs/builddocs/html/index.html#>` 
+* `timml <https://mbakker7.github.io/timml/docs/builddocs/html/index.html#>`_
+* `ttim <https://mbakker7.github.io/ttim/docs/builddocs/html/index.html#>`_
 
 Why?
 ----
