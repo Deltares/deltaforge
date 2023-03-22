@@ -57,7 +57,7 @@ specs:
   - bioconda::snakemake # Get only snakemake from bioconda channel
   - spyder
   - ttim =0.6.4
-  - timml # Due to a typo, timml 6.04 is seen as the last version on conda-forge.
+  - timml =6.1.0 # Due to a typo, timml 6.04 is seen as the last version on conda-forge.
   - toolz
   - vtk >=9.0
   - xarray
