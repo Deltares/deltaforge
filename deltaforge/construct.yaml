@@ -1,5 +1,5 @@
 name: Deltaforge
-version: 0.3.1
+version: 0.3.2
 installer_type: all
 
 channels:
@@ -30,7 +30,8 @@ specs:
   - hydromt
   - hydromt_sfincs
   - hydromt_wflow
-  - imod = 0.12.0
+  - hydromt_delwaq
+  - imod = 0.13.0
   - ipykernel
   - ipython
   - jinja2
