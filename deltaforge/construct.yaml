@@ -31,7 +31,7 @@ specs:
   - hydromt_sfincs
   - hydromt_wflow
   - hydromt_delwaq
-  - imod = 0.13.0
+  - imod >=0.13.1
   - ipykernel
   - ipython
   - jinja2
@@ -62,7 +62,7 @@ specs:
   - toolz
   - vtk >=9.0
   - xarray
-  - xugrid >=0.1.10
+  - xugrid >=0.4.0
   - zarr
 
 license_file: ../LICENSE
