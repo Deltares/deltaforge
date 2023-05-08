@@ -7,8 +7,16 @@ version, the latest versions of packages of that moment are installed if left
 unspecified in the ``construct.yaml`` file. The latest version of which can be
 found in :ref:`include-ref`.
 
+v0.4.0 [08-05-2023]
+###################
+
+- Add hydromt_delwaq plugin
+- Update iMOD Python to 0.13.1
+- Update xugrid to 0.4.0
+- Update HydroMT Sfincs plugin to 1.0
+
 v0.3.1 [22-03-2023]
-#################
+###################
 
 - Bump gistim to version 0.4.1
 
