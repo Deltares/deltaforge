@@ -1,5 +1,5 @@
 name: Deltaforge
-version: 0.3.2
+version: 0.4.0
 installer_type: all
 
 channels:
@@ -28,7 +28,7 @@ specs:
   - gistim =0.4.1
   - graphviz
   - hydromt
-  - hydromt_sfincs
+  - hydromt_sfincs >=1.0
   - hydromt_wflow
   - hydromt_delwaq
   - imod >=0.13.1
