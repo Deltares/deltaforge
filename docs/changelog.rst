@@ -5,7 +5,7 @@ Changelog
 Conscious changes to Deltaforge are described here. Note that with each
 version, the latest versions of packages of that moment are installed if left
 unspecified in the ``construct.yaml`` file. The latest version of which can be
-found in :ref:`include-ref`.
+found in :ref:`include-pkg`.
 
 v0.4.0 [08-05-2023]
 ###################
