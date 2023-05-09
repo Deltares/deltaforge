@@ -37,6 +37,7 @@ Deltares packages currently included are:
 * `HydroMT <https://deltares.github.io/hydromt/latest>`_
 * `HydroMT WFLOW plugin <https://deltares.github.io/hydromt_wflow/latest/>`_
 * `HydroMT SFINCS plugin <https://deltares.github.io/hydromt_sfincs/latest/>`_
+* `HydroMT DELWAQ plugin <https://deltares.github.io/hydromt_delwaq/latest/>`_
 * `xugrid <https://deltares.github.io/xugrid/>`_
 * `gistim <https://github.com/Deltares/QGIS-Tim>`_
 
