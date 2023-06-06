@@ -19,7 +19,7 @@ example iMOD Python or HydroMT significantly easier.
 Where?
 ------
 
-* `You can download the signed installer here on oss.deltares.nl <https://download.deltares.nl/en/download/imod-viewer/>`_
+* `You can download the signed installer here on oss.deltares.nl <https://download2.deltares.nl/imod-suite/>`_
 * `The unsigned installer can be dowloaded from Github <https://github.com/Deltares/deltaforge/releases>`_
 
 .. note::
