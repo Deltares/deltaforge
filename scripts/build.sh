@@ -10,24 +10,19 @@ CONSTRUCT_ROOT="${CONSTRUCT_ROOT:-${PWD}}"
 cd "${CONSTRUCT_ROOT}"
 
 echo "***** Install libmamba solver *****"
-conda install -y conda=22.9 # Constructor doesn't support plugin structure of conda yet (22.11), so stick to 22.9
-conda install conda=22.9 conda-libmamba-solver 
-conda config --set experimental_solver libmamba
+conda install conda-libmamba-solver 
+conda config --set solver libmamba
 
 echo "***** Install constructor *****"
-conda install -y conda=22.9 conda-standalone menuinst freetype jinja2 curl libarchive "ruamel_yaml>=0.11.14,<0.16" -c conda-forge --override-channels
+conda install -y constructor "ruamel_yaml>=0.11.14,<0.16" -c conda-forge --override-channels
 
 if [[ "$(uname)" == "Darwin" ]]; then
-    conda install -y conda=22.9 coreutils -c conda-forge --override-channels
+    conda install -y coreutils -c conda-forge --override-channels
 fi
 # shellcheck disable=SC2154
 if [[ "${TARGET_PLATFORM}" == win-* ]]; then
-    conda install -y conda=22.9 "nsis=3.01" "pillow>=3.1" -c conda-forge --override-channels
+    conda install -y "pillow>=3.1" -c conda-forge --override-channels
 fi
-
-# We require the latest, unreleased version of constructor,
-# as this supports the libmamba solver
-pip install git+https://github.com/conda/constructor@fd028c8
 
 conda list
 
