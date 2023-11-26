@@ -1,5 +1,5 @@
 name: Deltaforge
-version: 0.4.0
+version: 0.5.0
 installer_type: all
 
 channels:
@@ -13,7 +13,7 @@ write_condarc: True
 keep_pkgs: True
 
 specs:
-  - python
+  - python =3.10
   - conda
   - conda-libmamba-solver
   - mamba
@@ -25,13 +25,13 @@ specs:
   - dask
   - flopy
   - geopandas
-  - gistim =0.4.1
+  - gistim >=0.5.0
   - graphviz
   - hydromt
   - hydromt_sfincs >=1.0
   - hydromt_wflow
   - hydromt_delwaq
-  - imod >=0.13.1
+  - imod >=0.15.0
   - ipykernel
   - ipython
   - jinja2
@@ -58,7 +58,7 @@ specs:
   - bioconda::snakemake # Get only snakemake from bioconda channel
   - spyder
   - ttim =0.6.4
-  - timml =6.1.0 # Due to a typo, timml 6.04 is seen as the last version on conda-forge.
+  - timml =6.2.0 # Due to a typo, timml 6.04 is seen as the last version on conda-forge.
   - toolz
   - vtk >=9.0
   - xarray
