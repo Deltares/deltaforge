@@ -7,6 +7,14 @@ version, the latest versions of packages of that moment are installed if left
 unspecified in the ``construct.yaml`` file. The latest version of which can be
 found in :ref:`include-pkg`.
 
+v0.5.0 [26-11-2023]
+###################
+
+- Add pymetis as dependency
+- Update iMOD Python to 0.15.0
+- Update timml to 0.6.2
+- Update gistim to 0.5.0
+
 v0.4.0 [08-05-2023]
 ###################
 
