@@ -7,6 +7,17 @@ version, the latest versions of packages of that moment are installed if left
 unspecified in the ``construct.yaml`` file. The latest version of which can be
 found in :ref:`include-pkg`.
 
+v0.6.0 [20-03-2024]
+###################
+
+- Update python to 3.11
+- Update iMOD Python to 0.15.3
+- Update timml to 6.4.1
+- Update ttim to 0.6.6
+- Enforce xarray >= 2023.08.0
+- Enforce numba >= 0.50
+- Enforce rasterio >= 1.0
+
 v0.5.0 [26-11-2023]
 ###################
 
