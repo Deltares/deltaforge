@@ -1,5 +1,5 @@
 name: Deltaforge
-version: 0.6.0
+version: 0.7.0
 installer_type: all
 
 channels:
@@ -51,6 +51,7 @@ specs:
   - python-graphviz
   - pyvista
   - rasterio >=1.0
+  - ribasim >=2024.10.0
   - rioxarray
   - scipy
   - scooby

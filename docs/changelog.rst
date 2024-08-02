@@ -7,6 +7,12 @@ version, the latest versions of packages of that moment are installed if left
 unspecified in the ``construct.yaml`` file. The latest version of which can be
 found in :ref:`include-pkg`.
 
+v0.7.0 [08-08-2024]
+###################
+
+- Include Ribasim Python
+- Enforce ribasim >= 2024.10.0
+
 v0.6.0 [20-03-2024]
 ###################
 

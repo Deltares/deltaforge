@@ -39,6 +39,7 @@ Deltares packages currently included are:
 * `HydroMT SFINCS plugin <https://deltares.github.io/hydromt_sfincs/latest/>`_
 * `HydroMT DELWAQ plugin <https://deltares.github.io/hydromt_delwaq/latest/>`_
 * `xugrid <https://deltares.github.io/xugrid/>`_
+* `Ribasim Python <https://deltares.github.io/Ribasim/reference/python/>`_
 * `gistim <https://github.com/Deltares/QGIS-Tim>`_
 
 Important non-Deltares packages included in Deltaforge are:
