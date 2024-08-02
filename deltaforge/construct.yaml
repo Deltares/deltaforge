@@ -51,6 +51,7 @@ specs:
   - python-graphviz
   - pyvista
   - rasterio >=1.0
+  - ribasim >=2024.10.0
   - rioxarray
   - scipy
   - scooby
