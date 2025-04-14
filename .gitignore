@@ -1,4 +1,5 @@
-
-
-# pixi environments
 .pixi
+bin
+obj
+deltaforge.tar
+*.log
