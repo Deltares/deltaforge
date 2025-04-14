@@ -1,0 +1,30 @@
+[project]
+authors = ["Huite <huite.bootsma@gmail.com>"]
+channels = ["conda-forge"]
+description = "Wix toolset installer creation for iMOD python."
+name = "deltaforge"
+platforms = ["win-64"]
+version = "0.0.1"
+
+[dependencies]
+pixi-pack = ">=0.5.0,<2"
+dotnet-sdk = ">=9.0.202,<10"
+
+[feature.installer.dependencies]
+# imod = "*"
+python = "3.11.*"
+humanize = "*"
+
+[tasks]
+lockfile = "pixi update -e installer"
+download-wix-toolset = "powershell -Command \"Invoke-WebRequest -Uri ('https://github.com/wixtoolset/wix/releases/download/' + (Invoke-RestMethod -Uri 'https://api.github.com/repos/wixtoolset/wix/releases/latest').tag_name + '/wix-cli-x64.msi') -OutFile 'wix-cli-x64.msi'\""
+
+pack = { cmd = "pixi-pack pack --environment installer --output-file deltaforge.tar", depends-on = [
+    "lockfile",
+] }
+create = { cmd = "dotnet build", depends-on = ["pack"] }
+test-install = { cmd = "msiexec /passive /i bin\\Debug\\deltaforge.msi /lv install.log" }
+test-uninstall = { cmd = "msiexec /passive /x bin\\Debug\\deltaforge.msi /lv uninstall.log" }
+
+[environments]
+installer = { features = ["installer"], no-default-feature = true }

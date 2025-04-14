@@ -1,4 +1,4 @@
-build/
-*.exe
-docs/_build/
-.vscode/
+
+
+# pixi environments
+.pixi
