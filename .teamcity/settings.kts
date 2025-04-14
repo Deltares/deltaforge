@@ -35,8 +35,18 @@ object iMOD6_Deltaforge_CreateInstaller : BuildType({
     id("CreateInstaller")
     name = "Create Installer"
 
+    artifactRules = "bin/Release/deltaforge.msi"
+
     vcs {
         root(DslContext.settingsRoot)
+    }
+
+    steps {
+        script {
+            name = "pixi run create"
+            id = "pixi_run_create"
+            scriptContent = "pixi run create"
+        }
     }
 
     triggers {
@@ -44,8 +54,7 @@ object iMOD6_Deltaforge_CreateInstaller : BuildType({
         }
     }
 
-    features {
-        perfmon {
-        }
+    requirements {
+        contains("teamcity.agent.jvm.os.name", "Windows")
     }
 })
