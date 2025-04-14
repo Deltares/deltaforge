@@ -1,10 +1,7 @@
 [project]
-authors = ["Huite <huite.bootsma@gmail.com>"]
-channels = ["conda-forge", "bioconda"]
-description = "Wix toolset installer creation for iMOD python."
 name = "deltaforge"
+channels = ["conda-forge", "bioconda"]
 platforms = ["win-64"]
-version = "0.0.1"
 
 [dependencies]
 pixi-pack = ">=0.5.0,<2"
@@ -29,7 +26,6 @@ ttim = ">=0.6.6"
 
 [tasks]
 update-lockfile = "pixi update -e installer"
-download-wix-toolset = "powershell -Command \"Invoke-WebRequest -Uri ('https://github.com/wixtoolset/wix/releases/download/' + (Invoke-RestMethod -Uri 'https://api.github.com/repos/wixtoolset/wix/releases/latest').tag_name + '/wix-cli-x64.msi') -OutFile 'wix-cli-x64.msi'\""
 
 pack = { cmd = "pixi-pack pack --environment installer --output-file deltaforge.tar", depends-on = [
     "update-lockfile",
