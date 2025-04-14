@@ -1,6 +1,6 @@
 [project]
 authors = ["Huite <huite.bootsma@gmail.com>"]
-channels = ["conda-forge"]
+channels = ["conda-forge", "bioconda"]
 description = "Wix toolset installer creation for iMOD python."
 name = "deltaforge"
 platforms = ["win-64"]
@@ -13,6 +13,19 @@ dotnet-sdk = ">=9.0.202,<10"
 [feature.installer.dependencies]
 python = "3.11.*"
 imod = "*"
+xugrid = "*"
+gistim = "*"
+
+numpy = "*"
+matplotlib = "*"
+pandas = "*"
+geopandas = "*"
+rasterio = "*"
+shapely = "*"
+xarray = "*"
+snakemake = "*"
+timml = ">=6.4.1"
+ttim = ">=0.6.6"
 
 [tasks]
 update-lockfile = "pixi update -e installer"

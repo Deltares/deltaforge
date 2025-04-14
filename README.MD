@@ -35,7 +35,6 @@ Important non-Deltares packages included in Deltaforge are:
 * [shapely](https://shapely.readthedocs.io/en/stable/manual.html)
 * [xarray](https://xarray.dev/)
 * [snakemake](https://snakemake.readthedocs.io/en/stable/)
-* [spyder](https://www.spyder-ide.org/)
 * [timml](https://mbakker7.github.io/timml/docs/builddocs/html/index.html)
 * [ttim](https://mbakker7.github.io/ttim/docs/builddocs/html/index.html)
 
