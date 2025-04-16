@@ -1,6 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
-import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -46,11 +45,6 @@ object iMOD6_Deltaforge_CreateInstaller : BuildType({
             name = "pixi run create"
             id = "pixi_run_create"
             scriptContent = "pixi run create"
-        }
-    }
-
-    triggers {
-        vcs {
         }
     }
 
