@@ -23,7 +23,6 @@ Deltares packages currently included are:
 
 * [iMOD Python](https://deltares.gitlab.io/imod/imod-python)
 * [xugrid](https://deltares.github.io/xugrid/)
-* [gistim](https://github.com/Deltares/QGIS-Tim)
 
 Important non-Deltares packages included in Deltaforge are:
 
@@ -35,8 +34,6 @@ Important non-Deltares packages included in Deltaforge are:
 * [shapely](https://shapely.readthedocs.io/en/stable/manual.html)
 * [xarray](https://xarray.dev/)
 * [snakemake](https://snakemake.readthedocs.io/en/stable/)
-* [timml](https://mbakker7.github.io/timml/docs/builddocs/html/index.html)
-* [ttim](https://mbakker7.github.io/ttim/docs/builddocs/html/index.html)
 
 ## Why?
 
