@@ -32,11 +32,11 @@ cmd = "dotnet build {{ environment }} -c Release -p:iMODVersion=1.0.0"
 
 [tasks.test-install]
 args = ["environment"]
-cmd = "msiexec /passive /i {{ environment }}\\bin\\Release\\{{ environment }}.msi /lv install.log"
+cmd = "msiexec /passive /i {{ environment }}\\bin\\Release\\en-us\\{{ environment }}.msi /lv install.log"
 
 [tasks.test-uninstall]
 args = ["environment"]
-cmd = "msiexec /passive /x {{ environment }}\\bin\\Release\\{{ environment }}.msi /lv uninstall.log"
+cmd = "msiexec /passive /x {{ environment }}\\bin\\Release\\en-us\\{{ environment }}.msi /lv uninstall.log"
 
 [tasks.pack]
 args = ["environment"]
