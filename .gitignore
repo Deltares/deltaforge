@@ -1,5 +1,7 @@
 .pixi
-bin
-obj
-imodforge.tar
 *.log
+
+# ignore bin and obj, but keep the obj folder for pixi-pack to store the .tar file.
+imodforge/bin
+imodforge/obj/*
+!immodforge/obj/.gitkeep
