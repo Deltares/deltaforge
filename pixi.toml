@@ -60,7 +60,7 @@ cmd = "pixi-pack pack --environment {{ environment }} --output-file {{ environme
 # ]
 
 [tasks]
-create-imodforge = [
+create-imodforge = { depends-on = [
     { task = "update-lockfile", args = [
         "imodforge",
     ] },
@@ -70,7 +70,7 @@ create-imodforge = [
     { task = "build", args = [
         "imodforge",
     ] },
-]
+] }
 
 [environments]
 imodforge = { features = ["imodforge"], no-default-feature = true }
