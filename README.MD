@@ -52,10 +52,10 @@ above.
 ## Contributing
 
 The tasks and dependencies for this package are handled via [pixi](https://pixi.sh/latest/).
-The `installer` environment is only used for the pixi-pack command to create the packages that are to be installed.
+The `imodforge` environment is only used for the pixi-pack command to create the packages that are to be installed.
 The `default` environment is used to actually perform the tasks of creating an installer.
 
 To build an installer from scratch, `pixi pack` needs to be run, and after that `dotnet build`.
-This can be done in one go via `pixi run create`.
+This can be done in one go via `pixi run create-imodforge`.
 
-Other useful commands for testing are `pixi run build` (not packing every time), `pixi run test-install` and `pixi run test-uninstall` (create log files in the repo directory).
+Other useful commands for testing are `pixi run build imodforge` (not packing every time), `pixi run test-install imodforge` and `pixi run test-uninstall imodforge` (create log files in the repo directory).

@@ -19,11 +19,11 @@
     <WixVariable Id="WixUILicenseRtf"
                  Value="EULA.rtf" />
     <WixVariable Id="WixUIDialogBmp"
-                 Value="icons\dialog_welcome.bmp" />
+                 Value="..\icons\dialog_welcome.bmp" />
     <WixVariable Id="WixUIBannerBmp"
-                 Value="icons\top_banner.bmp" />
+                 Value="..\icons\top_banner.bmp" />
     <Icon Id="DeltaforgeIcon"
-          SourceFile="icons\deltaforge_icon.ico" />
+          SourceFile="..\icons\deltaforge_icon.ico" />
     <Property Id="ARPPRODUCTICON"
               Value="DeltaforgeIcon" />
 
@@ -58,7 +58,7 @@
     <DirectoryRef Id="INSTALLFOLDER">
       <Component Id="PromptBatchFile">
         <File Id="PromptBatchFile"
-              Source="scripts\imodforge_prompt.bat" />
+              Source="imodforge_prompt.bat" />
         <!-- Uninstall activate.bat, created by pixi-pack -->
         <RemoveFile Id="ActivateBatchFile"
                     Name="activate.bat"
@@ -66,7 +66,7 @@
       </Component>
       <Component Id="DeltaforgeIconFile">
         <File Id="DeltaforgeIconFile"
-              Source="icons\deltaforge_icon.ico" />
+              Source="..\icons\deltaforge_icon.ico" />
       </Component>
 
       <!-- Include the pixi-pack executable and tar file in the installer -->
@@ -76,7 +76,7 @@
       </Component>
       <Component Id="DeltaforgeTar">
         <File Id="DeltaforgeTar"
-              Source="imodforge.tar" />
+              Source="obj\imodforge.tar" />
       </Component>
     </DirectoryRef>
 

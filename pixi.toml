@@ -7,7 +7,7 @@ platforms = ["win-64"]
 pixi-pack = ">=0.5.0,<2"
 dotnet-sdk = ">=9.0.202,<10"
 
-[feature.installer.dependencies]
+[feature.imodforge.dependencies]
 python = "3.11.*"
 imod = "*"
 xugrid = "*"
@@ -21,16 +21,55 @@ shapely = "*"
 xarray = "*"
 snakemake = "*"
 
-[tasks]
-update-lockfile = "pixi update -e installer"
+[tasks.update-lockfile]
+args = ["environment"]
+cmd = "pixi update -e {{ environment }}"
 
-pack = { cmd = "pixi-pack pack --environment installer --output-file imodforge.tar", depends-on = [
-    "update-lockfile",
-] }
-build = "dotnet build -c Release"
-create = { depends-on = ["pack", "build"] }
-test-install = { cmd = "msiexec /passive /i bin\\Release\\iMODforge.msi /lv install.log" }
-test-uninstall = { cmd = "msiexec /passive /x bin\\Release\\iMODforge.msi /lv uninstall.log" }
+[tasks.build]
+args = ["environment"]
+cmd = "dotnet build {{ environment }} -c Release"
+
+[tasks.test-install]
+args = ["environment"]
+cmd = "msiexec /passive /i {{ environment }}\\bin\\Release\\{{ environment }}.msi /lv install.log"
+
+[tasks.test-uninstall]
+args = ["environment"]
+cmd = "msiexec /passive /x {{ environment }}\\bin\\Release\\{{ environment }}.msi /lv uninstall.log"
+
+[tasks.pack]
+args = ["environment"]
+cmd = "pixi-pack pack --environment {{ environment }} --output-file {{ environment }}/obj/{{ environment }}.tar"
+
+# TODO: Pixi 0.47 will be able to pass arguments as {{ environment}} into tasks.
+# https://github.com/prefix-dev/pixi/issues/3538
+# Then it will be possible to just have a task called "create".
+# [tasks.create]
+# args = ["environment"]
+# depends-on = [
+#     { task = "update-lockfile", args = [
+#         "{{ environment }}",
+#     ] },
+#     { task = "pack", args = [
+#         "{{ environment }}",
+#     ] },
+#     { task = "build", args = [
+#         "{{ environment }}",
+#     ] },
+# ]
+
+[tasks]
+create-imodforge = [
+    { task = "update-lockfile", args = [
+        "imodforge",
+    ] },
+    { task = "pack", args = [
+        "imodforge",
+    ] },
+    { task = "build", args = [
+        "imodforge",
+    ] },
+]
 
 [environments]
-installer = { features = ["installer"], no-default-feature = true }
+imodforge = { features = ["imodforge"], no-default-feature = true }
