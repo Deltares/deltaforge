@@ -1,4 +1,4 @@
 @echo off
-set "PROMPT=(deltaforge) $P$G"
+set "PROMPT=(imodforge) $P$G"
 call "%~dp0\activate.bat"
 cd /D %userprofile%

@@ -1,11 +1,10 @@
-# Deltaforge
+# iMODforge
 
-![Deltaforge logo](icons/deltaforge_icon.png)
+![iMODforge logo](icons/deltaforge_icon.png)
 
 ## What is it?
 
-Deltaforge is a Windows installer of selected [Deltares](https://www.deltares.nl/en/).
-python packages and their dependencies.
+iMODforge is a Windows installer of selected [Deltares](https://www.deltares.nl/en/) python packages and their dependencies.
 This makes the process of installing iMOD Python significantly easier.
 
 ## Getting Started
@@ -13,7 +12,7 @@ This makes the process of installing iMOD Python significantly easier.
 You can download the signed installer here on [oss.deltares.nl](https://download2.deltares.nl/imod-suite/).
 After downloading, simply start the installer and follow the instructions.
 
-You can start an environment with all correct paths via the `Deltaforge Prompt` that can be found in your start menu.
+You can start an environment with all correct paths via the `iMODforge Prompt` that can be found in your start menu.
 From here you can start your editor so that the editor can find the installed components.
 You can also directly call `python` to start an interactive python terminal.
 
@@ -24,7 +23,7 @@ Deltares packages currently included are:
 * [iMOD Python](https://deltares.gitlab.io/imod/imod-python)
 * [xugrid](https://deltares.github.io/xugrid/)
 
-Important non-Deltares packages included in Deltaforge are:
+Important non-Deltares packages included in iMODforge are:
 
 * [numpy](https://numpy.org/)
 * [matplotlib](https://matplotlib.org/)
@@ -45,7 +44,7 @@ Experience has shown that these packages can be difficult to install for new use
 4. Installing python packages without access to `conda-forge` or `PyPi` is cumbersome.
    Some computational servers have no direct internet connection.
 
-The Deltaforge installer aids new users by installing a conda base environment
+The iMODforge installer aids new users by installing a conda base environment
 with all the required Python packages installed. These packages are contained in
 the executable. The installer thus helps circumventing the four issues mentioned
 above.

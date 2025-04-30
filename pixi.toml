@@ -1,5 +1,5 @@
 [project]
-name = "deltaforge"
+name = "iMODforge"
 channels = ["conda-forge", "bioconda"]
 platforms = ["win-64"]
 
@@ -24,13 +24,13 @@ snakemake = "*"
 [tasks]
 update-lockfile = "pixi update -e installer"
 
-pack = { cmd = "pixi-pack pack --environment installer --output-file deltaforge.tar", depends-on = [
+pack = { cmd = "pixi-pack pack --environment installer --output-file imodforge.tar", depends-on = [
     "update-lockfile",
 ] }
 build = "dotnet build -c Release"
 create = { depends-on = ["pack", "build"] }
-test-install = { cmd = "msiexec /passive /i bin\\Release\\deltaforge.msi /lv install.log" }
-test-uninstall = { cmd = "msiexec /passive /x bin\\Release\\deltaforge.msi /lv uninstall.log" }
+test-install = { cmd = "msiexec /passive /i bin\\Release\\iMODforge.msi /lv install.log" }
+test-uninstall = { cmd = "msiexec /passive /x bin\\Release\\iMODforge.msi /lv uninstall.log" }
 
 [environments]
 installer = { features = ["installer"], no-default-feature = true }

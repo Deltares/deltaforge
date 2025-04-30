@@ -2,15 +2,15 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
      xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
   <!-- Define product information -->
-  <Package Name="Deltaforge"
+  <Package Name="iMODforge"
            Language="1033"
            Version="0.0.1"
            Manufacturer="Deltares"
            Scope="perUser"
            UpgradeCode="e2ec506b-a362-4321-8704-1bcb32c0ec54">
 
-    <SummaryInformation Description="Deltaforge Installer Package" />
-    <MajorUpgrade DowngradeErrorMessage="A newer version of Deltaforge is already installed." />
+    <SummaryInformation Description="iMODforge Installer Package" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of iMODforge is already installed." />
 
     <!-- Use maximum compression -->
     <MediaTemplate EmbedCab="yes"
@@ -43,7 +43,7 @@
     <StandardDirectory Id="ProgramFilesFolder">
       <Directory Name="Deltares">
         <Directory Id="INSTALLFOLDER"
-                   Name="Deltaforge">
+                   Name="iMODforge">
           <!-- Program files will go here -->
         </Directory>
       </Directory>
@@ -51,14 +51,14 @@
 
     <StandardDirectory Id="ProgramMenuFolder">
       <Directory Id="ApplicationProgramsFolder"
-                 Name="Deltaforge" />
+                 Name="iMODforge" />
     </StandardDirectory>
 
     <!-- Define the files to install -->
     <DirectoryRef Id="INSTALLFOLDER">
       <Component Id="PromptBatchFile">
         <File Id="PromptBatchFile"
-              Source="scripts\deltaforge_prompt.bat" />
+              Source="scripts\imodforge_prompt.bat" />
         <!-- Uninstall activate.bat, created by pixi-pack -->
         <RemoveFile Id="ActivateBatchFile"
                     Name="activate.bat"
@@ -76,7 +76,7 @@
       </Component>
       <Component Id="DeltaforgeTar">
         <File Id="DeltaforgeTar"
-              Source="deltaforge.tar" />
+              Source="imodforge.tar" />
       </Component>
     </DirectoryRef>
 
@@ -85,10 +85,10 @@
       <Component Id="ApplicationShortcut"
                  Guid="*">
         <Shortcut Id="ApplicationStartMenuShortcut"
-                  Name="Deltaforge Prompt"
-                  Description="Opens Deltaforge environment prompt"
+                  Name="iMODforge Prompt"
+                  Description="Opens iMODforge environment prompt"
                   Target="[%COMSPEC]"
-                  Arguments="/k &quot;[INSTALLFOLDER]deltaforge_prompt.bat&quot;"
+                  Arguments="/k &quot;[INSTALLFOLDER]imodforge_prompt.bat&quot;"
                   WorkingDirectory="PersonalFolder"
                   Icon="DeltaforgeIcon" />
         <RemoveFolder Directory="ApplicationProgramsFolder"
@@ -104,7 +104,7 @@
 
     <!-- Define custom action to run pixi-pack unpack after the files are in place. -->
     <SetProperty Id="RunPixiPackCA"
-                 Value="&quot;[INSTALLFOLDER]pixi-pack.exe&quot; unpack -o &quot;[INSTALLFOLDER]\&quot; &quot;[INSTALLFOLDER]deltaforge.tar&quot;"
+                 Value="&quot;[INSTALLFOLDER]pixi-pack.exe&quot; unpack -o &quot;[INSTALLFOLDER]\&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
                  Before="RunPixiPackCA"
                  Sequence="execute" />
     <CustomAction Id="RunPixiPackCA"
@@ -116,7 +116,7 @@
 
     <!-- Define custom action to remove temporary files after installation was done. -->
     <SetProperty Id="RemoveTempFilesCA"
-                 Value="&quot;[%ComSpec]&quot; /c del &quot;[INSTALLFOLDER]pixi-pack.exe&quot; &quot;[INSTALLFOLDER]deltaforge.tar&quot;"
+                 Value="&quot;[%ComSpec]&quot; /c del &quot;[INSTALLFOLDER]pixi-pack.exe&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
                  Before="RemoveTempFilesCA"
                  Sequence="execute" />
     <CustomAction Id="RemoveTempFilesCA"
@@ -152,7 +152,7 @@
 
     <!-- Define which components to install -->
     <Feature Id="CompleteInstallation"
-             Title="Deltaforge"
+             Title="iMODforge"
              Level="1"
              AllowAdvertise="no"
              AllowAbsent="no">

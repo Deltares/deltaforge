@@ -34,7 +34,7 @@ object iMOD6_Deltaforge_CreateInstaller : BuildType({
     id("CreateInstaller")
     name = "Create Installer"
 
-    artifactRules = "bin/Release/deltaforge.msi"
+    artifactRules = "bin/Release/imodforge.msi"
 
     vcs {
         root(DslContext.settingsRoot)
