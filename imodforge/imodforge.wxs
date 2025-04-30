@@ -150,6 +150,11 @@
               Condition="REMOVE=&quot;ALL&quot;" />
     </InstallExecuteSequence>
 
+    <UI>
+      <ProgressText Action="RunPixiPackCA"
+                    Message="Unpacking iMODforge environment. This will take several minutes..." />
+    </UI>
+
     <!-- Define which components to install -->
     <Feature Id="CompleteInstallation"
              Title="iMODforge"
