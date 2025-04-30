@@ -8,7 +8,7 @@ environments:
       win-64:
       - conda: https://conda.anaconda.org/conda-forge/win-64/dotnet-runtime-9.0.4-h57928b3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/dotnet-sdk-9.0.203-h57928b3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/win-64/pixi-pack-0.5.0-ha073cba_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/pixi-pack-0.6.1-ha073cba_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/ucrt-10.0.22621.0-h57928b3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/vc-14.3-h2b53caa_26.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/vc14_runtime-14.42.34438-hfd919c2_26.conda
@@ -1438,6 +1438,7 @@ packages:
   sha256: 14663c21d671cb4ed4ead494d8476a85387c2a2506c722f4c5da907ba4292752
   md5: 30306e0a947a98a5ef69815f50c56327
   license: MIT
+  license_family: MIT
   size: 27668145
   timestamp: 1744412704495
 - conda: https://conda.anaconda.org/conda-forge/win-64/dotnet-sdk-9.0.203-h57928b3_0.conda
@@ -1446,6 +1447,7 @@ packages:
   depends:
   - dotnet-runtime 9.0.4.*
   license: MIT
+  license_family: MIT
   size: 144332639
   timestamp: 1744412879765
 - conda: https://conda.anaconda.org/conda-forge/win-64/double-conversion-3.3.1-he0c23c2_0.conda
@@ -4173,9 +4175,9 @@ packages:
   license: HPND
   size: 42176152
   timestamp: 1735930533925
-- conda: https://conda.anaconda.org/conda-forge/win-64/pixi-pack-0.5.0-ha073cba_0.conda
-  sha256: b3473ed0cfd68d63f73e26c765839eb7b12d5dfc40b93ec4184d3ce51b5ac460
-  md5: 2ca9767d28ce621caf6fea52739b0405
+- conda: https://conda.anaconda.org/conda-forge/win-64/pixi-pack-0.6.1-ha073cba_0.conda
+  sha256: e52f0c5e8f23776bf7af46feda8cb5241d25d7ba0513ed6e2a9d455cfc620ad9
+  md5: f14f7fa49c4c109110e8b804ff8cfbae
   depends:
   - vc >=14.2,<15
   - vc14_runtime >=14.29.30139
@@ -4185,8 +4187,8 @@ packages:
   - ucrt >=10.0.20348.0
   license: BSD-3-Clause
   license_family: BSD
-  size: 6853500
-  timestamp: 1744093785866
+  size: 9395898
+  timestamp: 1745939579909
 - conda: https://conda.anaconda.org/conda-forge/win-64/pixman-0.46.0-had0cd8c_0.conda
   sha256: d41f4d9faf6aefa138c609b64fe2a22cf252d88e8c393b25847e909d02870491
   md5: 01617534ef71b5385ebba940a6d6150d

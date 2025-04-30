@@ -28,7 +28,7 @@ cmd = "pixi update -e {{ environment }}"
 
 [tasks.build]
 args = ["environment"]
-cmd = "dotnet build {{ environment }} -c Release -p:iMODVersion=1.0.0"
+cmd = "IMOD_VERSION=$(powershell ./get_package_version.ps1 imod) && dotnet build {{ environment }} -c Release -p:iMODVersion=$IMOD_VERSION"
 
 [tasks.test-install]
 args = ["environment"]
@@ -71,6 +71,7 @@ create-imodforge = { depends-on = [
         "imodforge",
     ] },
 ] }
+imod-version = "IMOD_VERSION=$(powershell ./get_package_version.ps1 imod) && echo $IMOD_VERSION"
 
 [environments]
 imodforge = { features = ["imodforge"], no-default-feature = true }
