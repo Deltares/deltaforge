@@ -4,7 +4,7 @@
   <!-- Define product information -->
   <Package Name="iMODforge"
            Language="1033"
-           Version="0.0.1"
+           Version="$(iMODVersion)"
            Manufacturer="Deltares"
            Scope="perUser"
            UpgradeCode="e2ec506b-a362-4321-8704-1bcb32c0ec54">

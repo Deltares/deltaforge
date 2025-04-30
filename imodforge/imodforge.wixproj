@@ -1,6 +1,6 @@
 <Project Sdk="WixToolset.Sdk/5.0.2">
     <PropertyGroup>
-        <DefineConstants>HKCU_Key=Software\Deltares\iMODforge</DefineConstants>
+        <DefineConstants>HKCU_Key=Software\Deltares\iMODforge;iMODVersion=$(iMODVersion)</DefineConstants>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="WixToolset.UI.wixext"

@@ -28,7 +28,7 @@ cmd = "pixi update -e {{ environment }}"
 
 [tasks.build]
 args = ["environment"]
-cmd = "dotnet build {{ environment }} -c Release"
+cmd = "dotnet build {{ environment }} -c Release -p:iMODVersion=1.0.0"
 
 [tasks.test-install]
 args = ["environment"]
@@ -40,7 +40,7 @@ cmd = "msiexec /passive /x {{ environment }}\\bin\\Release\\{{ environment }}.ms
 
 [tasks.pack]
 args = ["environment"]
-cmd = "pixi-pack pack --environment {{ environment }} --output-file {{ environment }}/obj/{{ environment }}.tar"
+cmd = "pixi-pack pack --environment {{ environment }} --output-file {{ environment }}\\obj\\{{ environment }}.tar"
 
 # TODO: Pixi 0.47 will be able to pass arguments as {{ environment}} into tasks.
 # https://github.com/prefix-dev/pixi/issues/3538
