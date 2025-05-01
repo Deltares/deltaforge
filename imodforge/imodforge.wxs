@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+     xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+  <!-- Define product information -->
+  <Package Name="iMODforge"
+           Language="1033"
+           Version="$(iMODVersion)"
+           Manufacturer="Deltares"
+           Scope="perUser"
+           UpgradeCode="e2ec506b-a362-4321-8704-1bcb32c0ec54">
+
+    <SummaryInformation Description="iMODforge Installer Package" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of iMODforge is already installed." />
+
+    <!-- Use maximum compression -->
+    <MediaTemplate EmbedCab="yes"
+                   CompressionLevel="high" />
+
+    <WixVariable Id="WixUILicenseRtf"
+                 Value="EULA.rtf" />
+    <WixVariable Id="WixUIDialogBmp"
+                 Value="..\icons\dialog_welcome.bmp" />
+    <WixVariable Id="WixUIBannerBmp"
+                 Value="..\icons\top_banner.bmp" />
+    <Icon Id="DeltaforgeIcon"
+          SourceFile="..\icons\deltaforge_icon.ico" />
+    <Property Id="ARPPRODUCTICON"
+              Value="DeltaforgeIcon" />
+
+    <!-- UI configuration -->
+    <Property Id="WIXUI_INSTALLDIR"
+              Value="INSTALLFOLDER" />
+    <ui:WixUI Id="WixUI_InstallDir" />
+
+    <!-- Override ProgramFilesFolder with LocalAppDataFolder if user does not have administrator
+    privileges. -->
+    <SetProperty Id="ProgramFilesFolder"
+                 Value="[LocalAppDataFolder]"
+                 Before="CostFinalize"
+                 Condition="NOT Privileged" />
+
+    <!-- Define the directory structure using StandardDirectory -->
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Name="Deltares">
+        <Directory Id="INSTALLFOLDER"
+                   Name="iMODforge">
+          <!-- Program files will go here -->
+        </Directory>
+      </Directory>
+    </StandardDirectory>
+
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ApplicationProgramsFolder"
+                 Name="iMODforge" />
+    </StandardDirectory>
+
+    <!-- Define the files to install -->
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="PromptBatchFile">
+        <File Id="PromptBatchFile"
+              Source="imodforge_prompt.bat" />
+        <!-- Uninstall activate.bat, created by pixi-pack -->
+        <RemoveFile Id="ActivateBatchFile"
+                    Name="activate.bat"
+                    On="uninstall" />
+      </Component>
+      <Component Id="DeltaforgeIconFile">
+        <File Id="DeltaforgeIconFile"
+              Source="..\icons\deltaforge_icon.ico" />
+      </Component>
+
+      <!-- Include the pixi-pack executable and tar file in the installer -->
+      <Component Id="PixiPackExe">
+        <File Id="PixiPackExe"
+              Source="$(env.CONDA_PREFIX)\Library\bin\pixi-pack.exe" />
+      </Component>
+      <Component Id="DeltaforgeTar">
+        <File Id="DeltaforgeTar"
+              Source="obj\imodforge.tar" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Define the shortcut in the Start Menu -->
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut"
+                 Guid="*">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="iMODforge Prompt"
+                  Description="Opens iMODforge environment prompt"
+                  Target="[%COMSPEC]"
+                  Arguments="/k &quot;[INSTALLFOLDER]imodforge_prompt.bat&quot;"
+                  WorkingDirectory="PersonalFolder"
+                  Icon="DeltaforgeIcon" />
+        <RemoveFolder Directory="ApplicationProgramsFolder"
+                      On="uninstall" />
+        <RegistryValue Root="HKCU"
+                       Key="$(HKCU_Key)"
+                       Name="ApplicationShortcut"
+                       Type="integer"
+                       Value="1"
+                       KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Define custom action to run pixi-pack unpack after the files are in place. -->
+    <SetProperty Id="RunPixiPackCA"
+                 Value="&quot;[INSTALLFOLDER]pixi-pack.exe&quot; unpack -o &quot;[INSTALLFOLDER]\&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
+                 Before="RunPixiPackCA"
+                 Sequence="execute" />
+    <CustomAction Id="RunPixiPackCA"
+                  BinaryRef="Wix4UtilCA_$(sys.BUILDARCHSHORT)"
+                  DllEntry="WixQuietExec"
+                  Execute="deferred"
+                  Impersonate="yes"
+                  Return="check" />
+
+    <!-- Define custom action to remove temporary files after installation was done. -->
+    <SetProperty Id="RemoveTempFilesCA"
+                 Value="&quot;[%ComSpec]&quot; /c del &quot;[INSTALLFOLDER]pixi-pack.exe&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
+                 Before="RemoveTempFilesCA"
+                 Sequence="execute" />
+    <CustomAction Id="RemoveTempFilesCA"
+                  BinaryRef="Wix4UtilCA_$(sys.BUILDARCHSHORT)"
+                  DllEntry="WixQuietExec"
+                  Execute="deferred"
+                  Impersonate="yes"
+                  Return="check" />
+
+    <!-- Define custom action to remove unpacked files. -->
+    <SetProperty Id="RemovePixiUnpackedFilesCA"
+                 Value="&quot;[%ComSpec]&quot; /c rmdir /S /Q &quot;[INSTALLFOLDER]env&quot;"
+                 Before="RemovePixiUnpackedFilesCA"
+                 Sequence="execute" />
+    <CustomAction Id="RemovePixiUnpackedFilesCA"
+                  BinaryRef="Wix4UtilCA_$(sys.BUILDARCHSHORT)"
+                  DllEntry="WixQuietExec"
+                  Execute="deferred"
+                  Impersonate="yes"
+                  Return="check" />
+
+    <InstallExecuteSequence>
+      <Custom Action="RunPixiPackCA"
+              After="InstallFiles"
+              Condition="NOT Installed" />
+      <Custom Action="RemoveTempFilesCA"
+              After="RunPixiPackCA"
+              Condition="NOT Installed" />
+      <Custom Action="RemovePixiUnpackedFilesCA"
+              Before="RemoveFiles"
+              Condition="REMOVE=&quot;ALL&quot;" />
+    </InstallExecuteSequence>
+
+    <UI>
+      <ProgressText Action="RunPixiPackCA"
+                    Message="Unpacking iMODforge environment. This will take several minutes..." />
+    </UI>
+
+    <!-- Define which components to install -->
+    <Feature Id="CompleteInstallation"
+             Title="iMODforge"
+             Level="1"
+             AllowAdvertise="no"
+             AllowAbsent="no">
+      <ComponentRef Id="DeltaforgeTar" />
+      <ComponentRef Id="PromptBatchFile" />
+      <ComponentRef Id="DeltaforgeIconFile" />
+      <ComponentRef Id="PixiPackExe" />
+      <ComponentRef Id="ApplicationShortcut" />
+    </Feature>
+  </Package>
+</Wix>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us"
+                 xmlns="http://wixtoolset.org/schemas/v4/wxl">
+    <!-- Find the translation strings for the UI here:
+    https://github.com/wixtoolset/wix/blob/v5.0.2/src/ext/UI/wixlib/WixUI_en-us.wxl -->
+    <String Id="WelcomeDlg_Title"
+            Value="[ProductName] [ProductVersion] Setup" />
+    <String Id="LicenseAgreementDlg_Title"
+            Value="[ProductName] [ProductVersion] Setup" />
+    <String Id="InstallDirDlg_Title"
+            Value="[ProductName] [ProductVersion] Setup" />
+    <String Id="VerifyReadyDlg_Title"
+            Value="[ProductName] [ProductVersion] Setup" />
+    <String Id="DiskCostDlg_Title"
+            Value="[ProductName] [ProductVersion] Setup" />
+</WixLocalization>

@@ -1,6 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
-import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -27,25 +26,28 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2025.03"
 
 project {
-
     buildType(iMOD6_Deltaforge_CreateInstaller)
 }
 
 object iMOD6_Deltaforge_CreateInstaller : BuildType({
     id("CreateInstaller")
-    name = "Create Installer"
+    name = "Create iMODforge Installer"
+
+    artifactRules = "imodforge/bin/Release/en-us/imodforge.msi"
 
     vcs {
         root(DslContext.settingsRoot)
     }
 
-    triggers {
-        vcs {
+    steps {
+        script {
+            name = "pixi run create-imodforge"
+            id = "pixi_run_create"
+            scriptContent = "pixi run create-imodforge"
         }
     }
 
-    features {
-        perfmon {
-        }
+    requirements {
+        contains("teamcity.agent.jvm.os.name", "Windows")
     }
 })
