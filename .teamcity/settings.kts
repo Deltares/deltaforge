@@ -30,7 +30,7 @@ project {
 }
 
 object iMOD6_Deltaforge_CreateInstaller : BuildType({
-    id("CreateIMODforgeInstaller")
+    id("CreateInstaller")
     name = "Create iMODforge Installer"
 
     artifactRules = "imodforge/bin/Release/en-us/imodforge.msi"
