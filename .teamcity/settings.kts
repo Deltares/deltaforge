@@ -26,15 +26,14 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2025.03"
 
 project {
-
     buildType(iMOD6_Deltaforge_CreateInstaller)
 }
 
 object iMOD6_Deltaforge_CreateInstaller : BuildType({
-    id("CreateInstaller")
-    name = "Create Installer"
+    id("CreateIMODforgeInstaller")
+    name = "Create iMODforge Installer"
 
-    artifactRules = "bin/Release/en-us/imodforge.msi"
+    artifactRules = "imodforge/bin/Release/en-us/imodforge.msi"
 
     vcs {
         root(DslContext.settingsRoot)
