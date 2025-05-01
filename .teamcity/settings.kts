@@ -41,7 +41,7 @@ object iMOD6_Deltaforge_CreateInstaller : BuildType({
 
     steps {
         script {
-            name = "pixi run create"
+            name = "pixi run create-imodforge"
             id = "pixi_run_create"
             scriptContent = "pixi run create-imodforge"
         }
