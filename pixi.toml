@@ -22,6 +22,10 @@ xarray = "*"
 snakemake = "*"
 jupyter = "*"
 
+# prevent GPL packages to be included
+libarchive = { version="*", build="lgpl*" }
+libspatialite = { version="*", build="lgpl*" }
+
 [tasks.update-lockfile]
 args = ["environment"]
 cmd = "pixi update -e {{ environment }}"
