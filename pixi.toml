@@ -25,6 +25,7 @@ jupyter = "*"
 # prevent GPL packages to be included
 libarchive = { version = "*", build = "lgpl*" }
 libspatialite = { version = "*", build = "lgpl*" }
+ffmpeg = { version = "*", build = "lgpl_*" }
 
 [tasks.update-lockfile]
 args = ["environment"]
