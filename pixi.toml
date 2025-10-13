@@ -8,7 +8,7 @@ pixi-pack = ">=0.5.0,<2"
 dotnet-sdk = ">=9.0.202,<10"
 
 [feature.imodforge.dependencies]
-python = "3.11.*"
+python = "3.12.*"
 imod = "*"
 xugrid = "*"
 
@@ -21,6 +21,11 @@ shapely = "*"
 xarray = "*"
 snakemake = "*"
 jupyter = "*"
+
+# prevent GPL packages to be included
+libarchive = { version = "*", build = "lgpl*" }
+libspatialite = { version = "*", build = "lgpl*" }
+ffmpeg = { version = "*", build = "lgpl_*" }
 
 [tasks.update-lockfile]
 args = ["environment"]
