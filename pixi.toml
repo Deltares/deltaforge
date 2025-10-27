@@ -26,6 +26,7 @@ jupyter = "*"
 libarchive = { version = "*", build = "lgpl*" }
 libspatialite = { version = "*", build = "lgpl*" }
 ffmpeg = { version = "*", build = "lgpl_*" }
+spyder-kernels = ">=3.1.0,<4"
 
 [tasks.update-lockfile]
 args = ["environment"]
