@@ -1,4 +1,4 @@
-[project]
+[workspace]
 name = "iMODforge"
 channels = ["conda-forge", "bioconda"]
 platforms = ["win-64"]
@@ -10,6 +10,7 @@ dotnet-sdk = ">=9.0.202,<10"
 [feature.imodforge.dependencies]
 python = "3.12.*"
 imod = "*"
+ribasim = "*"
 xugrid = "*"
 
 numpy = "*"

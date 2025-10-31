@@ -21,6 +21,7 @@ You can also directly call `python` to start an interactive python terminal.
 Deltares packages currently included are:
 
 * [iMOD Python](https://deltares.gitlab.io/imod/imod-python)
+* [Ribasim Python](https://ribasim.org/)
 * [xugrid](https://deltares.github.io/xugrid/)
 
 Important non-Deltares packages included in iMODforge are:
