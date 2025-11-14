@@ -23,7 +23,7 @@
     <WixVariable Id="WixUIBannerBmp"
                  Value="..\icons\top_banner.bmp" />
     <Icon Id="DeltaforgeIcon"
-          SourceFile="..\icons\deltaforge_icon.ico" />
+          SourceFile="..\icons\iMODforge_icon.ico" />
     <Property Id="ARPPRODUCTICON"
               Value="DeltaforgeIcon" />
 
@@ -66,13 +66,13 @@
       </Component>
       <Component Id="DeltaforgeIconFile">
         <File Id="DeltaforgeIconFile"
-              Source="..\icons\deltaforge_icon.ico" />
+              Source="..\icons\iMODforge_icon.ico" />
       </Component>
 
-      <!-- Include the pixi-pack executable and tar file in the installer -->
+      <!-- Include the pixi-unpack executable and tar file in the installer -->
       <Component Id="PixiPackExe">
         <File Id="PixiPackExe"
-              Source="$(env.CONDA_PREFIX)\Library\bin\pixi-pack.exe" />
+              Source="$(env.CONDA_PREFIX)\bin\pixi-unpack.exe" />
       </Component>
       <Component Id="DeltaforgeTar">
         <File Id="DeltaforgeTar"
@@ -104,7 +104,7 @@
 
     <!-- Define custom action to run pixi-pack unpack after the files are in place. -->
     <SetProperty Id="RunPixiPackCA"
-                 Value="&quot;[INSTALLFOLDER]pixi-pack.exe&quot; unpack -o &quot;[INSTALLFOLDER]\&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
+                 Value="&quot;[INSTALLFOLDER]pixi-unpack.exe&quot; -o &quot;[INSTALLFOLDER]\&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
                  Before="RunPixiPackCA"
                  Sequence="execute" />
     <CustomAction Id="RunPixiPackCA"
@@ -116,7 +116,7 @@
 
     <!-- Define custom action to remove temporary files after installation was done. -->
     <SetProperty Id="RemoveTempFilesCA"
-                 Value="&quot;[%ComSpec]&quot; /c del &quot;[INSTALLFOLDER]pixi-pack.exe&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
+                 Value="&quot;[%ComSpec]&quot; /c del &quot;[INSTALLFOLDER]pixi-unpack.exe&quot; &quot;[INSTALLFOLDER]imodforge.tar&quot;"
                  Before="RemoveTempFilesCA"
                  Sequence="execute" />
     <CustomAction Id="RemoveTempFilesCA"
