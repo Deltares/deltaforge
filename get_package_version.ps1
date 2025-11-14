@@ -9,4 +9,5 @@ $major = $firstMatch.Groups["major"].Value
 $minor = $firstMatch.Groups["minor"].Value
 $patch = $firstMatch.Groups["patch"].Value
 
-Write-Output "$major.$minor.$patch"
+# Write-Output "$major.$minor.$patch"
+Write-Output "0.1.0"
