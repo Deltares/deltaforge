@@ -1,20 +1,22 @@
-[project]
+[workspace]
 name = "iMODforge"
 channels = ["conda-forge", "bioconda"]
 platforms = ["win-64"]
 
 [dependencies]
+pixi = "*"
 pixi-pack = ">=0.5.0,<2"
+pixi-unpack = "*"
 dotnet-sdk = ">=9.0.202,<10"
 
 [feature.imodforge.dependencies]
 python = "3.12.*"
 imod = "*"
 xugrid = "*"
-
 numpy = "*"
 matplotlib = "*"
 pandas = "*"
+pandamesh = "*"
 geopandas = "*"
 rasterio = "*"
 shapely = "*"
@@ -46,7 +48,7 @@ cmd = "msiexec /passive /x {{ environment }}\\bin\\Release\\en-us\\{{ environmen
 
 [tasks.pack]
 args = ["environment"]
-cmd = "pixi-pack pack --environment {{ environment }} --output-file {{ environment }}\\obj\\{{ environment }}.tar"
+cmd = "pixi-pack --environment {{ environment }} --output-file {{ environment }}\\obj\\{{ environment }}.tar pixi.toml"
 
 # TODO: Pixi 0.47 will be able to pass arguments as {{ environment}} into tasks.
 # https://github.com/prefix-dev/pixi/issues/3538
