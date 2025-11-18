@@ -23,6 +23,7 @@ shapely = "*"
 xarray = "*"
 snakemake = "*"
 jupyter = "*"
+rioxarray = "*"
 
 # prevent GPL packages to be included
 libarchive = { version = "*", build = "lgpl*" }
